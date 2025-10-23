@@ -6,10 +6,15 @@
   ==================================================================
 -->
 
-## 10/23/2025 - Thinking and start the first PCB routing.  
+## 10/23/2025 5 PM - Thinking and start the first PCB routing.  
 
 I start thinking how can I solve the problem of accident and crowded roads, so I found that the best way to vision the road with AI and send commands to the motors to open and close the street also send for the users messages on an app about the roads state as it is will be a database that held all the data. AI will analysis the images. so, I start with making the PCB that will send data and make actions, so I start searching for the footprints then start working on the Kicad files.![Screenshot 2025-10-23 174736.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDc5NCwicHVyIjoiYmxvYl9pZCJ9fQ==--0e415781e85c2fa645c9a43024cef628b6b28f11/Screenshot%202025-10-23%20174736.png)
 ![Screenshot 2025-10-23 175036.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDc5NiwicHVyIjoiYmxvYl9pZCJ9fQ==--67488b1d0cf872f80dc03f1e3571f77d2be34289/Screenshot%202025-10-23%20175036.png)
 ![Screenshot 2025-10-23 175126.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDc5NywicHVyIjoiYmxvYl9pZCJ9fQ==--c7d1c380795e3ba2e3e5ca747571becef0e6415a/Screenshot%202025-10-23%20175126.png)
+  
+
+## 10/23/2025 6 PM - Start coding Python for image analysis  
+
+The data that the ESP32-CAM will get will need to be analysis so I start thinking about the best library and how each one work and the best one for the project, so I find that there are a lot of library so I start testing by some online images for roads and let it analysis it.![Screenshot 2025-10-23 180529.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDc5OSwicHVyIjoiYmxvYl9pZCJ9fQ==--3b7891c9f55a411fdb764b4b57fca54cf68e6f67/Screenshot%202025-10-23%20180529.png)
   
 
