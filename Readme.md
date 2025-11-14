@@ -73,11 +73,11 @@ The project began with the goal of reducing accidents and crowded roads. The cor
 
 A dedicated serial link is established using **UART2** to avoid conflicts with the programming ports.
 
-**Master (U1) â†’ Slave (U2):**
-- U1 GPIO 17 (TXD2) â†’ U2 GPIO 13 (RXD2)
+**Master (U1) & Slave (U2):**
+- U1 GPIO 17 (TXD2) with U2 GPIO 13 (RXD2)
 
-**Slave (U2) â†’ Master (U1):**
-- U1 GPIO 16 (RXD2) â†’ U2 GPIO 12 (TXD2)
+**Slave (U2) & Master (U1):**
+- U1 GPIO 16 (RXD2) with U2 GPIO 12 (TXD2)
 
 ## Software Setup
 
