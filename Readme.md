@@ -35,6 +35,27 @@ The project began with the goal of reducing accidents and crowded roads. The cor
 - Top and bottom parts with snap-fit assembly
 - Openings for camera lens and ESP32 USB port for programming access
 
+## Project Images
+
+### Schematic Design
+The schematic shows the complete circuit design including power management, communication links, and component interconnections.
+
+![Schematic](Images/Schematic.png)
+
+### PCB Layout
+The PCB layout demonstrates the physical arrangement of components, routing, and power planes optimized for the Smart Road Eye system.
+
+![PCB Layout](Images/PCB.png)
+
+### CAD Design
+The 3D CAD models show the enclosure design with top and bottom parts designed for 3D printing.
+
+**Top View:**
+![CAD Top](Images/CAD%20Top.png)
+
+**Bottom View:**
+![CAD Bottom](Images/CAD%20Bottom.png)
+
 ## Key Features
 
 - **AI Traffic Analysis**: ESP32-CAM analyzes road conditions to determine traffic density
