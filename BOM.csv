@@ -1,0 +1,16 @@
+Item,Description,Quantity,Unit Price (EGP),Total Price (EGP),Vendor,Product Link
+ESP32-DevKitC-32D (ESP-32 Development Board WiFi/Bluetooth),Main traffic controller pulling Firebase data and driving the signal logic,1,550,550,Most Electronics,https://mostelectronic.com/shop/arduino-development-boards/esp-32-development-board-wifi-bluetooth/
+ESP32-CAM Development Board with Camera,AI vision node capturing road frames at the intersection,1,300,300,Most Electronics,https://mostelectronic.com/shop/arduino-development-boards/esp32-cam-development-board-with-camera/
+ESP32-CAM-MB Micro USB Download Shield,USB-to-UART shield that powers/programs the ESP32-CAM,1,80,80,Most Electronics,https://mostelectronic.com/shop/arduino-development-boards/esp32-cam-mb-micro-usb-download-module-for-esp32-cam/
+3mm LED - Red,Traffic light red indicator,10,0.45,4.5,Most Electronics,https://mostelectronic.com/shop/displays-lcd-7-seg-led/leds-displays-lcd-7-seg-led/led-red-color-3mm/
+3mm LED - Green,Traffic light green indicator,10,0.45,4.5,Most Electronics,https://mostelectronic.com/shop/displays-lcd-7-seg-led/leds-displays-lcd-7-seg-led/led-green-color-3mm/
+3mm LED - Yellow,Traffic light yellow indicator,10,0.45,4.5,Most Electronics,https://mostelectronic.com/shop/displays-lcd-7-seg-led/leds-displays-lcd-7-seg-led/led-yellow-color-3mm/
+3mm LED - Blue,System status LED for power/debug feedback,10,0.45,4.5,Most Electronics,https://mostelectronic.com/shop/displays-lcd-7-seg-led/leds-displays-lcd-7-seg-led/led-blue-color-3mm/
+220Ω 1/4W resistors (4 pcs),Current limiting resistors for each LED channel,50,0.2,10,Most Electronics,https://mostelectronic.com/shop/components/resistor-220-ohm/
+Polypropylene Film Capacitor 1000nF 450V 105J,LDO input decoupling capacitor,2,5,10,Most Electronics,https://mostelectronic.com/shop/components/polypropylene-film-capacitors-1000nf-450v-105j/
+Electrolytic Capacitor 10uF 50V,LDO output bulk capacitor for stability,2,0.8,1.6,Most Electronics,https://mostelectronic.com/shop/components/capacitors/radial-electrolytic-capacitors/electrolytic-capacitor-10uf-50v/
+Battery Holder 3 x 18650,Primary field power source housing,1,18,18,Most Electronics,https://mostelectronic.com/shop/batteries-accessories/battery-accessories/battery-holder-3-x-18650/
+LD1117V33 Positive Voltage Regulator 3.3V,Main 3.3 V rail regulator feeding both ESP32 boards,1,20,20,Most Electronics,https://mostelectronic.com/shop/components/ld1117v33-positive-voltage-regulator-3-3v/
+1.2V AA Ni-MH 1800mAh Rechargeable Battery,AA cells that populate the holder (3 in series for ~3.6 V),3,50,150,Most Electronics,https://mostelectronic.com/shop/batteries-accessories/rechargeable-batteries/1-2v-aa-battery-ni-mh-1800mah/
+Smart Road Eye PCB fabrication (JLCPCB),PCBs,5,828.55,828.55,JLCPCB,https://jlcpcb.com/
+3D Printed Enclosure (top+bottom,self-funded),2,0,0,Self-fabricated,https://github.com/Hasona57/Smart-Road/tree/main/Case%203D%20files
