@@ -13,6 +13,7 @@
 - **Automated Actuators**: Servo-controlled emergency gates, speed bumps, and pedestrian gates
 - **Mobile App Integration**: Flutter mobile app displays real-time road status and pollution levels for drivers
 - **Smart Street Lighting**: Automatic street light control based on ambient light conditions
+- **Direct I2C LCD Display**: LCD connected directly to ESP32 (no Arduino needed)
 
 ---
 
@@ -31,6 +32,7 @@
 - **Traffic Light Module** - Physical 3-color LED traffic signal
 - **3x Servo Motors** - Emergency gate, speed bump, and pedestrian gate control
 - **5V Relay Module** - Street light control (10 white LEDs)
+- **I2C LCD Display 16x2** - System status display (directly connected to ESP32)
 
 #### 3. Sensor Network
 - **MQ135 Gas Sensor** - Air pollution monitoring
@@ -39,15 +41,13 @@
 - **LDR Module** - Day/night detection for automatic lighting
 - **Push Button** - Pedestrian crossing request
 
-#### 4. Display & Communication
-- **I2C LCD Display 16x2** - System status display
-- **Arduino Uno** (optional) - LCD controller
+#### 4. Communication
 - **WiFi Connectivity** - Both Raspberry Pi and ESP32 connect to WiFi
 
 ### Software Stack
 
 - **Raspberry Pi**: Python 3 with YOLO (Ultralytics), OpenCV, Picamera2, Pyrebase4
-- **ESP32 Master**: Arduino C++ with Firebase ESP32, ESP32Servo libraries
+- **ESP32 Master**: Arduino C++ with Firebase ESP32, ESP32Servo, LiquidCrystal_I2C libraries
 - **Cloud**: Firebase Realtime Database
 - **Mobile App**: Flutter (Dart) with Firebase integration
 
@@ -72,12 +72,13 @@ Firebase Data → ESP32 Master → Sensor Reading → Traffic Light Control
 - Combines with local sensor data (pollution, speed, vehicle presence)
 - Calculates optimal traffic light timing for each lane
 - Controls physical traffic lights and actuators
+- Displays status on I2C LCD directly connected to ESP32
 
 ### 3. Data Flow
 ```
 Raspberry Pi → Firebase → ESP32 Master → Traffic Lights
-                ↓
-            Mobile App (Flutter)
+                ↓                          ↓
+            Mobile App (Flutter)      I2C LCD Display
 ```
 
 ### 4. Sensor Integration
@@ -199,6 +200,7 @@ Smart-Road/
    - Install:
      - Firebase ESP32 Client
      - ESP32Servo
+     - LiquidCrystal_I2C (by Frank de Brabander)
 
 3. **Configure WiFi and Firebase**
    - Edit `code/ESP32_Master/esp32_master.ino`
@@ -211,6 +213,10 @@ Smart-Road/
      ```cpp
      #define FIREBASE_HOST "YOUR_FIREBASE_URL"
      #define FIREBASE_AUTH "YOUR_FIREBASE_AUTH"
+     ```
+   - Update I2C LCD address if needed (default: 0x27):
+     ```cpp
+     #define LCD_I2C_ADDRESS 0x27  // Change to 0x3F if your LCD uses different address
      ```
 
 4. **Upload Code**
@@ -239,12 +245,19 @@ Smart-Road/
 1. **Follow Wiring Guide**
    - See [code/WIRING_CONNECTIONS.md](code/WIRING_CONNECTIONS.md) for complete pin-to-pin connections
 
-2. **Power Supply**
+2. **I2C LCD Connection**
+   - Connect LCD SDA to ESP32 GPIO 21
+   - Connect LCD SCL to ESP32 GPIO 22
+   - Connect LCD VCC to ESP32 5V (or 3.3V depending on module)
+   - Connect LCD GND to ESP32 GND
+   - **Note**: I2C LCD is connected directly to ESP32 (no Arduino needed)
+
+3. **Power Supply**
    - Raspberry Pi: 5V 3A USB-C power supply
    - ESP32: USB or external 5V supply
    - Servos: External 5V 3A supply (recommended)
 
-3. **Camera Connection**
+4. **Camera Connection**
    - Connect Raspberry Pi Camera Module ribbon cable
    - Ensure proper orientation (metal contacts down)
 
@@ -275,6 +288,7 @@ Edit `code/ESP32_Master/esp32_master.ino`:
 #define WIFI_PASSWORD "YOUR_PASSWORD"
 #define FIREBASE_HOST "YOUR_FIREBASE_URL"
 #define FIREBASE_AUTH "YOUR_FIREBASE_AUTH"
+#define LCD_I2C_ADDRESS 0x27
 ```
 
 ---
@@ -323,12 +337,13 @@ smart-traffic-system/
    - ESP32 will automatically:
      - Connect to WiFi
      - Connect to Firebase
+     - Initialize I2C LCD display
      - Start reading sensor data
      - Control traffic lights
 
 3. **Monitor System**
    - Check Firebase console for real-time data
-   - View LCD display for system status
+   - View I2C LCD display for system status
    - Use Flutter mobile app for driver view
 
 ### System Operation
@@ -338,6 +353,7 @@ smart-traffic-system/
 - **Speed Violation**: Speed bump activates automatically
 - **Pedestrian Request**: Button press triggers pedestrian crossing sequence
 - **Night Mode**: Street lights turn on automatically
+- **LCD Display**: Shows current lane status, remaining time, and system messages
 
 ---
 
@@ -386,6 +402,13 @@ libcamera-hello -t 0  # Test camera
 - Check database rules
 - Ensure WiFi is connected first
 
+**I2C LCD not displaying:**
+- Check I2C connections (SDA → GPIO 21, SCL → GPIO 22)
+- Verify I2C address (try 0x27 or 0x3F)
+- Use I2C scanner to find correct address
+- Check power supply (5V or 3.3V depending on module)
+- Ensure common ground connection
+
 **Sensors not reading:**
 - Check wiring connections
 - Verify pin assignments in code
@@ -397,7 +420,9 @@ libcamera-hello -t 0  # Test camera
 
 See [BOM.csv](BOM.csv) for complete component list with prices and vendors.
 
-**Approximate Total Cost**: ~5,420 EGP (Egyptian Pounds)
+**Approximate Total Cost**: ~8835 EGP (Egyptian Pounds)
+
+**Note**: Arduino has been removed from the system. I2C LCD is now connected directly to ESP32.
 
 ---
 
@@ -408,6 +433,7 @@ See [BOM.csv](BOM.csv) for complete component list with prices and vendors.
 - **Servo Motors**: Use external power supply for multiple servos
 - **Battery Safety**: Follow proper battery handling procedures
 - **Firebase Security**: Use proper database rules to prevent unauthorized access
+- **I2C Pull-ups**: Most I2C LCD modules have built-in pull-up resistors
 
 ---
 
@@ -431,6 +457,7 @@ See [BOM.csv](BOM.csv) for complete component list with prices and vendors.
 - Raspberry Pi migration from ESP32-CAM
 - System integration and testing
 - Mobile app development
+- **I2C LCD direct connection** (removed Arduino dependency)
 
 ### Phase 5: Refinement
 - Performance optimization
