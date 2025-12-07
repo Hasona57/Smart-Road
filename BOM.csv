@@ -1,8 +1,8 @@
 Item,Description,Quantity,Unit Price (EGP),Total Price (EGP),Vendor,Product Link
 Raspberry Pi 4 Model B (8GB RAM),AI vision processing unit running YOLO detection locally,1,5250,5250,Most Electronics,https://mostelectronic.com/shop/arduino-development-boards/raspberry-pi/raspberry-pi-4-computer-model-b-8gb-ram-made-in-uk/
-Raspberry Pi Camera Module v2,High-quality camera for road monitoring and AI detection,1,1000,1000, Amazon, as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B01ER2SKFS/ref=ox_sc_act_title_5?smid=A2DMKAT7ZKLGQN&psc=1
-MicroSD Card 64GB Class 10,Storage for Raspberry Pi OS and software,1,409,409, Amazon, as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0FD16QM6Y/ref=ox_sc_act_title_4?smid=A333W4VBQOFM2A&psc=1
-Raspberry Pi 5V 3A USB-C Power Supply,Official power supply for Raspberry Pi 4,1,517.5,517.5, Amazon, as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0D1VSXRGL/ref=ox_sc_act_title_2?smid=A3TF4AIIHFQJ8B&psc=1
+Raspberry Pi Camera Module v2,High-quality camera for road monitoring and AI detection,1,1000,1000, Amazon as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B01ER2SKFS/ref=ox_sc_act_title_5?smid=A2DMKAT7ZKLGQN&psc=1
+MicroSD Card 64GB Class 10,Storage for Raspberry Pi OS and software,1,409,409, Amazon as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0FD16QM6Y/ref=ox_sc_act_title_4?smid=A333W4VBQOFM2A&psc=1
+Raspberry Pi 5V 3A USB-C Power Supply,Official power supply for Raspberry Pi 4,1,517.5,517.5, Amazon as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0D1VSXRGL/ref=ox_sc_act_title_2?smid=A3TF4AIIHFQJ8B&psc=1
 ESP32-DevKitC-32D (ESP-32 Development Board),Main traffic controller pulling Firebase data and driving signal logic,1,400,400,Most Electronics,https://mostelectronic.com/shop/arduino-development-boards/esp32e-wroom-development-board-wifi-and-bluetooth-38-pin-with-ch340/
 Traffic Light Module (3-Color LED Module),Single physical traffic light with Red/Yellow/Green LEDs,1,35,35,Free Electronics,https://free-electronic.com/product/traffic-lights-signal/
 Servo Motor SG90 (Emergency Gate),Servo motor for emergency gate control,1,85,85,Most Electronics,https://mostelectronic.com/shop/motors-drives-2/servo-motors-motors-drives-2/servo-motor-sg90/
@@ -22,7 +22,7 @@ Breadboard (830 Points),Prototyping breadboard for circuit assembly,1,40,40,Most
 5V 3A Power Supply (External),External power supply for servos and additional components,1,120,120,Most Electronics,https://mostelectronic.com/shop/components/power-adapter/adapter-power-supply-5vdc-3a/
 Resistor 220Ω 1/4W (for Street LEDs),Current limiting resistors for LEDs if needed,20,0.2,4,Most Electronics,https://mostelectronic.com/shop/components/resistor-220-ohm/
 White LED 5mm (Street Lights),White LEDs for street lighting (10 pieces),10,0.45,4.5,Most Electronics,https://mostelectronic.com/shop/displays-lcd-7-seg-led/leds-displays-lcd-7-seg-led/led-white-white-color-5mm/
-HDMI to mini HDMI Cable (for Raspberry Pi),HDMI cable for connecting Raspberry Pi to monitor,1,134,134, Amazon, as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0BF184FV8/ref=ox_sc_act_title_1?smid=A3TF4AIIHFQJ8B&psc=1
-3 in 1 USB C SD Card Reader USB C to SD/Micro SD/USB 3.0 Adapter TF Memory Card Reader Compatible with Type C Devices, SD card reader,1,269,269, Amazon, as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0C8FV2LCX/ref=ox_sc_act_title_3?smid=A264BKS0ISFRYD&psc=1
+HDMI to mini HDMI Cable (for Raspberry Pi),HDMI cable for connecting Raspberry Pi to monitor,1,134,134, Amazon as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0BF184FV8/ref=ox_sc_act_title_1?smid=A3TF4AIIHFQJ8B&psc=1
+3 in 1 USB C SD Card Reader USB C to SD/Micro SD/USB 3.0 Adapter TF Memory Card Reader Compatible with Type C Devices, SD card reader,1,269,269, Amazon as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0C8FV2LCX/ref=ox_sc_act_title_3?smid=A264BKS0ISFRYD&psc=1
 ,,,,,,,
 TOTAL ESTIMATED COST (EGP),,All Items Above,,8835,,,Approximate total cost
