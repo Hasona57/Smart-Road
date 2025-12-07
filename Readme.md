@@ -2,18 +2,12 @@
 
 ## Project Overview
 
-**Smart Road Eye** is an intelligent traffic management system that uses AI vision processing to monitor road conditions in real-time, analyze traffic patterns, and automatically control traffic signals. The system integrates Raspberry Pi for AI-powered object detection, ESP32 for traffic control, and Firebase Realtime Database for cloud connectivity, providing a complete smart traffic solution.
+**Smart Road Eye** is a traffic management system as I see a challenge that faces my country which is the conjestion and the bad traffic distribution and the bad traffic light function as sometimes you find the other road is very emepty and the second road is full but they must wait untill the traffic light count down that what make me want to made this project where it use AI vision through Raspberry Pi with camera module to detect cars and count them and detect emergency if there is one also another system to reduce the fast car speeds was added which is the ACTibump and another system for citzen which is the push button and the servo and there is a lane for emergency which is closed and open only if there is an emergency.
 
-### Key Features
+### Key Systems
 
-- **AI-Powered Vision System**: Raspberry Pi with Camera Module runs YOLO object detection locally to analyze traffic density and vehicle types
-- **Intelligent Traffic Control**: ESP32 Master controller adjusts traffic light timing based on AI analysis and sensor data
-- **Real-time Cloud Integration**: Firebase Realtime Database stores and synchronizes data across all system components
-- **Multi-Sensor Integration**: Air pollution monitoring, speed detection, vehicle detection, and day/night sensing
-- **Automated Actuators**: Servo-controlled emergency gates, speed bumps, and pedestrian gates
-- **Mobile App Integration**: Flutter mobile app displays real-time road status and pollution levels for drivers
-- **Smart Street Lighting**: Automatic street light control based on ambient light conditions
-- **Direct I2C LCD Display**: LCD connected directly to ESP32 (no Arduino needed)
+- **Emergency detection and emergency lane**: Raspberry Pi with Camera Module detect an emergency car it send to the servo gate to open the emergency lane.
+- edit from here note for future hassan
 
 ---
 
