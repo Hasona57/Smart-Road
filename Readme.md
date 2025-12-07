@@ -92,22 +92,51 @@ Raspberry Pi → Firebase → ESP32 Master → Traffic Lights
 
 ```
 Smart-Road/
-├── ESP32_Master/
-│   └── esp32_master.ino          # Main traffic controller code
-├── my_model/
-│   ├── raspberry_pi_yolo_client.py  # AI detection client
-│   ├── my_model.pt                # Trained YOLO model
-│   ├── requirements.txt            # Python dependencies
-│   └── README.md                  # Raspberry Pi setup guide
-├── Application flutter/
-│   └── [Flutter mobile app code]
-├── Firebase/
-│   ├── firebase_config.h.example  # Firebase configuration template
-│   └── firebase_rules.json        # Database security rules
-├── WIRING_CONNECTIONS.md          # Complete wiring guide
-├── RASPBERRY_PI_SETUP_GUIDE.md   # Beginner setup guide
-├── BOM.csv                        # Bill of Materials
-└── README.md                      # This file
+├── code/
+│   ├── ESP32_Master/
+│   │   └── esp32_master.ino          # Main traffic controller code
+│   ├── my_model/
+│   │   ├── raspberry_pi_yolo_client.py  # AI detection client (Raspberry Pi)
+│   │   ├── my_model.pt                # Trained YOLO model
+│   │   ├── requirements.txt            # Python dependencies
+│   │   └── README.md                  # Raspberry Pi detection guide
+│   ├── Application flutter/
+│   │   ├── lib/
+│   │   │   ├── main.dart              # Flutter app main file
+│   │   │   ├── models/
+│   │   │   │   └── road_data.dart     # Data models
+│   │   │   └── services/
+│   │   │       ├── background_monitor.dart      # Background monitoring
+│   │   │       ├── notification_service.dart    # Push notifications
+│   │   │       └── road_cache_manager.dart      # Data caching
+│   │   ├── assets/
+│   │   │   └── sounds/                # App sound files
+│   │   ├── pubspec.yaml               # Flutter dependencies
+│   │   └── README.md                  # Flutter app documentation
+│   ├── Firebase/
+│   │   ├── firebase_config.h.example  # Firebase configuration template
+│   │   └── firebase_rules.json        # Database security rules
+│   ├── Labels/
+│   │   ├── Hassan/                    # Training images (Hassan folder)
+│   │   └── [Training images]          # Additional training data
+│   ├── WIRING_CONNECTIONS.md          # Complete wiring guide
+│   └── RASPBERRY_PI_SETUP_GUIDE.md   # Beginner setup guide
+├── AI/
+│   ├── toy_car_detection/             # YOLO model training project
+│   │   ├── train.py                   # Training script
+│   │   ├── dataset/                   # Training dataset
+│   │   └── [YOLO model files]          # Pre-trained models
+│   ├── src/
+│   │   ├── detector.py                # Detection script
+│   │   └── api_detector.py            # API detection script
+│   └── requirements.txt               # AI training dependencies
+├── 3D/
+│   ├── Printer/                       # 3D printable STL files
+│   └── [3D model files]                # Component 3D models (STEP files)
+├── Images/                             # Project images and screenshots
+├── BOM.csv                             # Bill of Materials
+├── README.md                           # This file (main documentation)
+└── JOURNAL.md                          # Project development journal
 ```
 
 ---
@@ -144,7 +173,7 @@ Smart-Road/
 
 4. **Install Python Packages**
    ```bash
-   cd my_model
+   cd code/my_model
    pip3 install -r requirements.txt
    ```
 
@@ -154,7 +183,7 @@ Smart-Road/
    python3 raspberry_pi_yolo_client.py
    ```
 
-**Detailed Setup**: See [RASPBERRY_PI_SETUP_GUIDE.md](RASPBERRY_PI_SETUP_GUIDE.md) for complete beginner instructions.
+**Detailed Setup**: See [code/RASPBERRY_PI_SETUP_GUIDE.md](code/RASPBERRY_PI_SETUP_GUIDE.md) for complete beginner instructions.
 
 ### Step 2: ESP32 Master Setup
 
@@ -172,7 +201,7 @@ Smart-Road/
      - ESP32Servo
 
 3. **Configure WiFi and Firebase**
-   - Edit `ESP32_Master/esp32_master.ino`
+   - Edit `code/ESP32_Master/esp32_master.ino`
    - Update WiFi credentials:
      ```cpp
      #define WIFI_SSID "YOUR_WIFI_SSID"
@@ -203,12 +232,12 @@ Smart-Road/
 
 3. **Set Database Rules**
    - Database > Rules
-   - Use rules from `Firebase/firebase_rules.json`
+   - Use rules from `code/Firebase/firebase_rules.json`
 
 ### Step 4: Hardware Assembly
 
 1. **Follow Wiring Guide**
-   - See [WIRING_CONNECTIONS.md](WIRING_CONNECTIONS.md) for complete pin-to-pin connections
+   - See [code/WIRING_CONNECTIONS.md](code/WIRING_CONNECTIONS.md) for complete pin-to-pin connections
 
 2. **Power Supply**
    - Raspberry Pi: 5V 3A USB-C power supply
@@ -225,7 +254,7 @@ Smart-Road/
 
 ### Raspberry Pi Detection Settings
 
-Edit `my_model/raspberry_pi_yolo_client.py`:
+Edit `code/my_model/raspberry_pi_yolo_client.py`:
 
 ```python
 MODEL_PATH = "my_model.pt"           # Your YOLO model file
@@ -239,7 +268,7 @@ FIREBASE_UPDATE_INTERVAL = 1.0      # Update interval (seconds)
 
 ### ESP32 Master Settings
 
-Edit `ESP32_Master/esp32_master.ino`:
+Edit `code/ESP32_Master/esp32_master.ino`:
 
 ```cpp
 #define WIFI_SSID "YOUR_WIFI"
@@ -285,7 +314,7 @@ smart-traffic-system/
 
 1. **Power On Raspberry Pi**
    ```bash
-   cd ~/Smart-Road/my_model
+   cd ~/Smart-Road/code/my_model
    python3 raspberry_pi_yolo_client.py
    ```
 
@@ -321,7 +350,7 @@ The Flutter mobile application provides:
 - Route recommendations based on congestion
 - Emergency alerts and notifications
 
-**Location**: `Application flutter/`
+**Location**: `code/Application flutter/`
 
 ---
 
@@ -337,7 +366,7 @@ libcamera-hello -t 0  # Test camera
 ```
 
 **Model not found:**
-- Verify `my_model.pt` exists in `my_model/` folder
+- Verify `my_model.pt` exists in `code/my_model/` folder
 - Check file permissions
 
 **Firebase connection failed:**
@@ -459,11 +488,12 @@ This project is open source and available under the MIT License.
 ## Support
 
 For detailed setup instructions:
-- **Raspberry Pi**: See [RASPBERRY_PI_SETUP_GUIDE.md](RASPBERRY_PI_SETUP_GUIDE.md)
-- **Wiring**: See [WIRING_CONNECTIONS.md](WIRING_CONNECTIONS.md)
-- **Raspberry Pi Detection**: See [my_model/README.md](my_model/README.md)
+- **Raspberry Pi**: See [code/RASPBERRY_PI_SETUP_GUIDE.md](code/RASPBERRY_PI_SETUP_GUIDE.md)
+- **Wiring**: See [code/WIRING_CONNECTIONS.md](code/WIRING_CONNECTIONS.md)
+- **Raspberry Pi Detection**: See [code/my_model/README.md](code/my_model/README.md)
 
 ---
 
 **Smart Road Eye** - Making roads safer and smarter through AI and IoT technology.
+**Note** - This README.md is written with a lot of AI help.
 
