@@ -1,0 +1,59 @@
+================================================================================
+                    TOY CAR DETECTION - START HERE
+================================================================================
+
+STEP 1: Install Python (if needed)
+-----------------------------------
+If you see "python is not recognized", you need to install Python first:
+
+  1. Run: INSTALL_PYTHON.bat (opens download page)
+  2. Download Python 3.11 from python.org
+  3. IMPORTANT: Check "Add Python to PATH" during installation!
+  4. Restart your terminal
+
+See INSTALL_PYTHON.md for detailed instructions.
+
+
+STEP 2: Setup Environment
+-------------------------
+Once Python is installed, run:
+
+  python toy_car_detection\setup_environment.bat
+
+Or if that doesn't work, try:
+
+  py toy_car_detection\setup_environment.bat
+
+
+STEP 3: Collect & Label Images
+-------------------------------
+- Take photos with ESP32-CAM
+- Label with Roboflow (roboflow.com)
+- Export as YOLOv8 format
+- Place in dataset/ folder
+
+
+STEP 4: Train Model
+-------------------
+  python toy_car_detection\train.py
+
+
+STEP 5: Start Server
+--------------------
+  python toy_car_detection\server.py
+
+
+STEP 6: Configure ESP32-CAM
+----------------------------
+- Update WiFi credentials in esp32_cam.ino
+- Update server IP address
+- Upload to ESP32-CAM
+
+
+================================================================================
+For detailed instructions, see:
+  - QUICK_START.md (step-by-step guide)
+  - README.md (full documentation)
+  - INSTALL_PYTHON.md (Python installation help)
+================================================================================
+

@@ -1,0 +1,24 @@
+/*
+ * Firebase Configuration
+ */
+
+#ifndef FIREBASE_CONFIG_H
+#define FIREBASE_CONFIG_H
+
+// Firebase Realtime Database URL
+#define FIREBASE_HOST "https://smart-traffic-system-4ac4b-default-rtdb.firebaseio.com/"
+
+// Firebase Auth Token (Database Secret)
+#define FIREBASE_AUTH "YOUR_FIREBASE_AUTH_TOKEN"
+
+// For Mobile App (Firebase Web SDK)
+#define FIREBASE_API_KEY "AIzaSyB654P2Pdrx7EUkD1RmLFIZq5jFo2RAki4"
+#define FIREBASE_AUTH_DOMAIN "smart-traffic-system-4ac4b.firebaseapp.com"
+#define FIREBASE_DATABASE_URL "https://smart-traffic-system-4ac4b-default-rtdb.firebaseio.com"
+#define FIREBASE_PROJECT_ID "smart-traffic-system-4ac4b"
+#define FIREBASE_STORAGE_BUCKET "smart-traffic-system-4ac4b.firebasestorage.app"
+#define FIREBASE_MESSAGING_SENDER_ID "1068147331995"
+#define FIREBASE_APP_ID "1:1068147331995:web:e30c688326c7831f85c73e"
+#define FIREBASE_MEASUREMENT_ID "G-DYF3L76WV7"
+
+#endif

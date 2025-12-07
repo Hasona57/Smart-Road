@@ -1,0 +1,59 @@
+# Arduino
+*.hex
+*.elf
+*.bin
+build/
+.vscode/
+*.code-workspace
+
+# Node.js / React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp/
+.pnp.js
+
+# React Native
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
+
+# Firebase
+firebase_config.h
+google-services.json
+GoogleService-Info.plist
+firebase-debug.log
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+logs
+*.log
+
+# Build outputs
+dist/
+build/
+*.apk
+*.aab
+*.ipa
+
+# OS
+Thumbs.db
+
+
+

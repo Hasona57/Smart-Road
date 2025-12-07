@@ -1,0 +1,54 @@
+{
+  "roads": {
+    "road_001": {
+      "roadId": "road_001",
+      "roadName": "Main Street - Sector 4",
+      "trafficLightStatus": "Green",
+      "trafficState": "Clear",
+      "pollutionPpm": 8.5,
+      "travelTimeMinutes": 12.3,
+      "hasAccident": false,
+      "hasEmergencyVehicle": false,
+      "accidentDetails": null,
+      "lastUpdated": "2024-01-15T10:30:00.000Z"
+    },
+    "road_002": {
+      "roadId": "road_002",
+      "roadName": "Highway 101 - Northbound",
+      "trafficLightStatus": "Red",
+      "trafficState": "Heavy Congestion",
+      "pollutionPpm": 18.2,
+      "travelTimeMinutes": 28.5,
+      "hasAccident": true,
+      "hasEmergencyVehicle": false,
+      "accidentDetails": "Multi-vehicle collision on northbound lane. Emergency services on scene.",
+      "lastUpdated": "2024-01-15T10:35:00.000Z"
+    },
+    "road_003": {
+      "roadId": "road_003",
+      "roadName": "Park Avenue - Downtown",
+      "trafficLightStatus": "Yellow",
+      "trafficState": "Moderate",
+      "pollutionPpm": 12.8,
+      "travelTimeMinutes": 18.7,
+      "hasAccident": false,
+      "hasEmergencyVehicle": true,
+      "accidentDetails": null,
+      "lastUpdated": "2024-01-15T10:32:00.000Z"
+    },
+    "road_004": {
+      "roadId": "road_004",
+      "roadName": "Coastal Highway - East",
+      "trafficLightStatus": "Green",
+      "trafficState": "Clear",
+      "pollutionPpm": 6.2,
+      "travelTimeMinutes": 8.5,
+      "hasAccident": false,
+      "hasEmergencyVehicle": false,
+      "accidentDetails": null,
+      "lastUpdated": "2024-01-15T10:28:00.000Z"
+    }
+  }
+}
+
+

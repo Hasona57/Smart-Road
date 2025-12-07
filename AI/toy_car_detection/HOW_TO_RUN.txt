@@ -1,0 +1,32 @@
+================================================================================
+                    HOW TO RUN THE SETUP SCRIPT
+================================================================================
+
+IMPORTANT: .bat files are Windows batch scripts, NOT Python scripts!
+
+❌ WRONG:
+   py setup_environment.bat          (Don't do this!)
+
+✅ CORRECT:
+   setup_environment.bat              (Just run it directly!)
+   
+   OR in PowerShell/CMD:
+   .\setup_environment.bat
+
+================================================================================
+
+Since you're in the toy_car_detection folder, just run:
+
+   setup_environment.bat
+
+Or if you're in the parent folder:
+
+   toy_car_detection\setup_environment.bat
+
+================================================================================
+
+The script will automatically detect if you have 'python' or 'py' command
+and use the correct one.
+
+================================================================================
+
