@@ -1,4 +1,4 @@
-Item,Description,Quantity,Unit Price (EGP),Total Price (EGP),Vendor,Product Link,Notes
+Item,Description,Quantity,Unit Price (EGP),Total Price (EGP),Vendor,Product Link
 Raspberry Pi 4 Model B (8GB RAM),AI vision processing unit running YOLO detection locally,1,5250,5250,Most Electronics,https://mostelectronic.com/shop/arduino-development-boards/raspberry-pi/raspberry-pi-4-computer-model-b-8gb-ram-made-in-uk/
 Raspberry Pi Camera Module v2,High-quality camera for road monitoring and AI detection,1,1000,1000, Amazon, as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B01ER2SKFS/ref=ox_sc_act_title_5?smid=A2DMKAT7ZKLGQN&psc=1
 MicroSD Card 64GB Class 10,Storage for Raspberry Pi OS and software,1,409,409, Amazon, as it is not available in Most,https://www.amazon.eg/-/en/gp/product/B0FD16QM6Y/ref=ox_sc_act_title_4?smid=A333W4VBQOFM2A&psc=1
