@@ -21,9 +21,9 @@
 ### Hardware Components
 
 #### 1. AI Vision System (Raspberry Pi)
-- **Raspberry Pi 4** (4GB+ RAM) - Main AI processing unit
+- **Raspberry Pi 4** (8GB+ RAM) - Main AI processing unit
 - **Raspberry Pi Camera Module v2** - High-quality road monitoring camera
-- **MicroSD Card** (32GB+) - Operating system and software storage
+- **MicroSD Card** (64GB+) - Operating system and software storage
 - Runs YOLO object detection model locally for real-time traffic analysis
 
 #### 2. Traffic Control System (ESP32 Master)
@@ -100,7 +100,7 @@ Smart-Road/
 │   │   ├── my_model.pt                # Trained YOLO model
 │   │   ├── requirements.txt            # Python dependencies
 │   │   └── README.md                  # Raspberry Pi detection guide
-│   ├── Application flutter/
+│   ├── Application Flutter/           # You can access the final APK through Smart-Road\Code\Application flutter\build\app\outputs\flutter-apk
 │   │   ├── lib/
 │   │   │   ├── main.dart              # Flutter app main file
 │   │   │   ├── models/
@@ -145,7 +145,7 @@ Smart-Road/
 
 ### Prerequisites
 
-- Raspberry Pi 4 (4GB+ RAM recommended)
+- Raspberry Pi 4 (8GB+ RAM recommended)
 - ESP32 Development Board
 - All sensors and components (see BOM.csv)
 - WiFi network access
