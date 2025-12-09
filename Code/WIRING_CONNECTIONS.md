@@ -7,7 +7,7 @@ Complete pin-to-pin wiring guide for all components in the Smart Road Management
 ## 📋 Table of Contents
 
 1. [ESP32 Master Controller Connections](#esp32-master-controller-connections)
-2. [ESP32-CAM Connections](#esp32-cam-connections)
+2. [Raspberry Pi Camera Connections](#raspberry-pi-camera-connections)
 3. [I2C LCD Display Connections](#i2c-lcd-display-direct-connection-to-esp32)
 4. [Power Distribution](#power-distribution)
 5. [Component Interconnections](#component-interconnections)
@@ -345,13 +345,13 @@ Common GND Bus
 ### System Communication Flow
 
 ```
-ESP32-CAM (AI Vision)
+Raspberry Pi (AI Vision)
     ↓ (WiFi)
 Firebase Realtime Database
     ↑ (WiFi)
 ESP32 Master (Controller)
     ↓ (I2C)
-LCD Display (Direct Connection)
+LCD Display (Direct Connection to ESP32)
 ```
 
 ### Physical Wire Connections Summary
@@ -421,7 +421,7 @@ LCD Display (Direct Connection)
 2. **Signal Levels:**
    - ESP32 GPIO: 3.3V logic (max 3.3V input!)
    - All modules (LDR, Ultrasonic, Traffic Light) are compatible
-   - Arduino: 5V logic (but works with 3.3V Serial)
+   - I2C LCD: 5V or 3.3V compatible (check module specifications)
 
 3. **Ground Connections:**
    - Always connect all GND together (common ground)

@@ -1,7 +1,8 @@
 #include <WiFi.h>
 #include <FirebaseESP32.h>
 #include <ESP32Servo.h>
-#include <HardwareSerial.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 
 // ============ WiFi & Firebase Configuration ============
 #define WIFI_SSID "H&M"
@@ -37,10 +38,11 @@ Servo pedestrianGateServo;
 #define ULTRASONIC_ECHO 33     // Ultrasonic echo
 #define PEDESTRIAN_BUTTON 0    // Pedestrian crossing button
 
-// Arduino Communication (Serial UART)
-#define ARDUINO_SERIAL_RX 17  // Not used (one-way communication)
-#define ARDUINO_SERIAL_TX 16  // ESP32 sends data to Arduino
-#define SERIAL_BAUD 9600
+// I2C LCD Display (Direct Connection)
+#define LCD_I2C_ADDRESS 0x27  // I2C address (0x27 or 0x3F - check your LCD module)
+#define LCD_COLUMNS 16
+#define LCD_ROWS 2
+LiquidCrystal_I2C lcd(LCD_I2C_ADDRESS, LCD_COLUMNS, LCD_ROWS);
 
 // ============ Global Variables ============
 bool emergencyMode = false;
@@ -84,8 +86,15 @@ const float distanceBetweenSensors = 5.0; // meters
 void setup() {
   Serial.begin(115200);
   
-  // Initialize Serial communication with Arduino LCD
-  Serial2.begin(SERIAL_BAUD, SERIAL_8N1, ARDUINO_SERIAL_RX, ARDUINO_SERIAL_TX);
+  // Initialize I2C LCD Display
+  Wire.begin();
+  lcd.init();
+  lcd.backlight();
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Smart Road Eye");
+  lcd.setCursor(0, 1);
+  lcd.print("Initializing...");
   
   // Initialize pins
   initializePins();
@@ -407,9 +416,12 @@ void updateLCDTrafficTime(int lane, unsigned long currentMillis, unsigned long l
     }
   }
   
-  // Format message: "TIME:L1:5:GREEN" or "TIME:L2:3:YELLOW"
-  String message = "TIME:L" + String(lane) + ":" + String(remainingTime) + ":" + stateStr;
-  sendToLCD(message);
+  // Display on I2C LCD
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Lane " + String(lane) + ": " + stateStr);
+  lcd.setCursor(0, 1);
+  lcd.print("Time: " + String(remainingTime) + "s");
 }
 
 void setLaneState(int lane, TrafficState state) {
@@ -644,9 +656,19 @@ void activateFailSafe() {
   sendToLCD("NOTE:FAILSAFE:Active");
 }
 
-// ============ Arduino LCD Communication ============
+// ============ I2C LCD Display Functions ============
 void sendToLCD(String message) {
-  Serial2.println(message);  // Send via Serial2 to Arduino
-  delay(10);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  
+  // Split message if too long (max 16 chars per line)
+  if (message.length() <= 16) {
+    lcd.print(message);
+  } else {
+    // Split into two lines if message is longer than 16 characters
+    lcd.print(message.substring(0, 16));
+    lcd.setCursor(0, 1);
+    lcd.print(message.substring(16, 32));
+  }
 }
 
