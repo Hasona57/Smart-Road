@@ -15,7 +15,7 @@
 ## images and how they will be connected to the prototype:
 The project was first made as a small prototype for the original road, but for the Raspberry Pi, if it works, it can be used as it is on the actual road but if the governorate takes this idea, there will be high-quality cameras and high processing, so I made this as a start to make my country.
 - First, the base is a cardboard that we colored and made look like a road, as shown in the image ![painting cardboard](Images/painting.jpg)
-- Second, we printed some 3D parts for the project. We printed a stand for the traffic light and attached another stand to it that inserts into the first one for the camera module. ![3D printing parts](Images/Screenshot%2025-12-10%055634.png) ![3D printing parts2](Images/Screenshot%2025-12-10%055656.png) ![3D printing parts3](Images/Screenshot%2025-12-10%055706.png)
+- Second, we printed some 3D parts for the project. We printed a stand for the traffic light and attached another stand to it that inserts into the first one for the camera module. ![3D printing parts](Images/3D1.png) ![3D printing parts2](Images/3D2.png) ![3D printing parts3](Images/3D3.png)
 - Thirdly, some carton caps were put under the prototype to make a space under it for connections to be from downward and to make the ACTibump move up and down using the servo. ![Prototype](Images/84b82b9f-c0b8-411b-b61f-d8473a4bb700.jpg)
 
 ### Hardware Components
