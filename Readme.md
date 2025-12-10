@@ -33,27 +33,33 @@
 - 3 in 1 USB C SD Card Reader USB C to SD/Micro SD/USB 3.0 Adapter TF Memory Card Reader Compatible with Type C Devices (to upload the RP system)
 
 ## Components images
-![Raspberry Pi](Images/raspberry-pi-4.jpg)
-![camera](Images/RaspeberryPiCameraV2.jpg)
-![SD](Images/SDcard.jpg)
-![Raspberry Pi Adapter](Images/RaspberryPiTypeCadapter.jpg)
-![ESP32](Images/ESP32-WROOM-Board.jpg)
-![Traffic module](Images/trafficlightmodule.jpg)
-![servo](Images/Servo-Motor-SG90.jpg)
-![LEDs](Images/LED-White5mm.jpg)
-![LCD](Images/LCD16x2-I2C.jpg)
-![IR](Images/IR-Infrared.jpg)
-![Ultrasonic](Images/Ultrasonic-Sensor-HC-SR04.jpg)
-![LDR](Images/ldr.jpg)
-![PushButton](Images/pushbutton.jpg)
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="Images/raspberry-pi-4.jpg" width="300">
+  <img src="Images/RaspeberryPiCameraV2.jpg" width="300">
+  <img src="Images/SDcard.jpg" width="300">
+  <img src="Images/RaspberryPiTypeCadapter.jpg" width="300">
+  <img src="Images/RaspberryPiTypeCadapter.jpg" width="300">
+  <img src="Images/trafficlightmodule.jpg" width="300">
+  <img src="Images/Servo-Motor-SG90.jpg" width="300">
+  <img src="Images/LED-White5mm.jpg" width="300">
+  <img src="Images/LCD16x2-I2C.jpg" width="300">
+  <img src="Images/IR-Infrared.jpg" width="300">
+  <img src="Images/Ultrasonic-Sensor-HC-SR04.jpg" width="300">
+  <img src="Images/ldr.jpg" width="300">
+  <img src="Images/pushbutton.jpg" width="300">
+</div>
 
 ## Construction
 - Starting to make the project, we used a cardboard and drew on it the road and focused on one side of the road, then we colored the drawing and the result as shown in the following images
-![painting cardboard](Images/painting.jpg)
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="Images/painting.jpg" width="300">
+</div>
 - Secondly, we printed a 3D part as the stand that will carry the traffic light and the camera module, as shown in the 3D folder and in the images following
-![3D printing parts](Images/3D1.png)
-![3D printing parts2](Images/3D2.png)
-![3D printing parts3](Images/3D3.png)
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="Images/3D1.png" width="300">
+  <img src="Images/3D2.png" width="300">
+  <img src="Images/3D3.png" width="300">
+</div>
 - Third, we start adding the component that we afford to get and make the connection beneath the road, and add some cups to carry it up upon the floor, then test the wired component in each system on its own, then test two systems, then check if all the systems are working together.
 
 ## AI
