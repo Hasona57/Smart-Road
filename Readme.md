@@ -282,10 +282,10 @@ The Flutter mobile application provides:
 
 ## Bill of Materials
 
-See [BOM.csv](BOM.csv) for complete component list with prices and vendors.
+See [BOM.csv](BOM.csv) for the complete component list with prices and vendors.
 
 **Approximate Total Cost**: ~8835 EGP (Egyptian Pounds)
-For me I have some of the components as I have an LCD I2C, a Push button, an LDR, 3 servos, a traffic light, a breadboard, an ESP32, LEDs, a Relay, a 5V Adapter, some Resistance, and 2 IRs, so it will be ~**7935.5** EGP (Egyptian Pounds)
+For me, I have some of the components as I have an LCD I2C, a Push button, an LDR, 3 servos, a traffic light, a breadboard, an ESP32, LEDs, a Relay, a 5V Adapter, some Resistance, and 2 IRs, so it will be ~**7780.5** EGP (Egyptian Pounds)
 
 ---
 
