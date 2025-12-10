@@ -27,7 +27,7 @@ The project was first made as a small prototype for the original road, but for t
 - **Raspberry Pi type-c power supply** - to operate the Raspberry Pi
 - Runs YOLO object detection model locally on the Raspberry Pi system for real-time traffic analysis and sets it up to send results to Firebase
 
-#### 2. Traffic Control System (ESP32 Master)
+#### 2. Traffic Control System (ESP32 Master) ![ESP32](Images/ESP32-WROOM-Board.jpg)
 - **ESP32 Development Board** - Main traffic controller
 - **Traffic Light Module** - Physical 3-color LED traffic signal
 - **3x Servo Motors** - Emergency gate, speed bump, and Citizen gate control
@@ -36,10 +36,10 @@ The project was first made as a small prototype for the original road, but for t
 
 #### 3. Sensor Network
 - **MQ135 Gas Sensor** - Air pollution monitoring note: in the prototype, it is not necessary as there won't be actual pollution, so I removed it
-- **2x IR Sensors** - use for Vehicle speed calculation by calculating the time and dividing the distance between the two IRs over the time gotten by the IRs, and use its speed result to choose whether to open or close the bumper.
-- **HC-SR04 Ultrasonic Sensor** - Vehicle presence detection to reduce energy by decreasing the time that light is on.
-- **LDR Module** - Day/night detection for automatic lighting
-- **Push Button** - Citizen crossing request
+- **2x IR Sensors** - use for Vehicle speed calculation by calculating the time and dividing the distance between the two IRs over the time gotten by the IRs, and use its speed result to choose whether to open or close the bumper. ![IR](Images/IR-Infrared.jpg)
+- **HC-SR04 Ultrasonic Sensor** - Vehicle presence detection to reduce energy by decreasing the time that light is on. ![Ultrasonic](Images/Ultrasonic-Sensor-HC-SR04.jpg)
+- **LDR Module** - Day/night detection for automatic lighting ![LDR](Images/ldr.jpg)
+- **Push Button** - Citizen crossing request ![PushButton](Images/push%button.jpg)
 
 #### 4. Communication
 - **WiFi Connectivity** - Both Raspberry Pi and ESP32 connect to WiFi, and both connect to Firebase to share data fast and efficiently. Also, the app uses the database as the source of the data.
