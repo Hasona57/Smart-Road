@@ -14,8 +14,7 @@
 ---
 ## images and how they will be connected to the prototype:
 The project is made first as a small prototype for the original road but for the raspberry pi if worked it can be used as it on actual road but if the governorate take this idea there will be high quality cameras and high processing so I made this as a start to make my country to imporve.
-- First, the base is a cardboard that we colored it and make it looks like a road. as shown in the image https://github.com/Hasona57/Smart-Road/blob/main/Images/painting.jpg
-## System Architecture
+- First, the base is a cardboard that we colored it and make it looks like a road. as shown in the image ![painting cardboard](Images/painting.jpg)
 
 ### Hardware Components
 
