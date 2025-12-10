@@ -38,7 +38,7 @@
   <img src="Images/RaspeberryPiCameraV2.jpg" width="300" height="300">
   <img src="Images/SDcard.jpg" width="300" height="300">
   <img src="Images/RaspberryPiTypeCadapter.jpg" width="300" height="300">
-  <img src="Images/RaspberryPiTypeCadapter.jpg" width="300" height="300">
+  <img src="Images/ESP32-WROOM-Board.jpg" width="300" height="300">
   <img src="Images/trafficlightmodule.jpg" width="300" height="300">
   <img src="Images/Servo-Motor-SG90.jpg" width="300" height="300">
   <img src="Images/LED-White5mm.jpg" width="300" height="300">
