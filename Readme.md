@@ -14,32 +14,82 @@
 ---
 ## images and how they will be connected to the prototype:
 The project was first made as a small prototype for the original road, but for the Raspberry Pi, if it works, it can be used as it is on the actual road but if the governorate takes this idea, there will be high-quality cameras and high processing, so I made this as a start to make my country.
-- First, the base is a cardboard that we colored and made look like a road, as shown in the image ![painting cardboard](Images/painting.jpg)
-- Second, we printed some 3D parts for the project. We printed a stand for the traffic light and attached another stand to it that inserts into the first one for the camera module. ![3D printing parts](Images/3D1.png) ![3D printing parts2](Images/3D2.png) ![3D printing parts3](Images/3D3.png)
-- Thirdly, some carton caps were put under the prototype to make a space under it for connections to be from downward and to make the ACTibump move up and down using the servo. ![Prototype](Images/84b82b9f-c0b8-411b-b61f-d8473a4bb700.jpg)
+- First, the base is a cardboard that we colored and made look like a road, as shown in the image
+<p align="center">
+  <img src="Images/painting.jpg" width="450">
+</p>
+- Second, we printed some 3D parts for the project. We printed a stand for the traffic light and attached another stand to it that inserts into the first one for the camera module.
+<p align="center">
+  <img src="Images/3D1.png" width="260">
+  <img src="Images/3D2.png" width="260">
+  <img src="Images/3D3.png" width="260">
+</p>
+- Thirdly, some carton caps were put under the prototype to make a space under it for connections to be from downward and to make the ACTibump move up and down using the servo.
+<p align="center">
+  <img src="Images/84b82b9f-c0b8-411b-b61f-d8473a4bb700.jpg" width="450">
+</p>
 
 ### Hardware Components
 
 #### 1. AI Vision System (Raspberry Pi) 
-- **Raspberry Pi 4** (8GB+ RAM) - Main AI processing unit ![Raspberry Pi](Images/raspberry-pi-4.jpg)
-- **Raspberry Pi Camera Module v2** - High-quality road monitoring camera ![camera](Images/RaspeberryPiCameraV2.jpg)
-- **MicroSD Card** (64GB+) - Operating system and software storage ![SD](Images/SDcard.jpg)
-- **Raspberry Pi type-c power supply** - to operate the Raspberry Pi ![Raspberry Pi Adapter](Images/RaspberryPiTypeCadapter.jpg)
+- **Raspberry Pi 4** (8GB+ RAM) - Main AI processing unit
+<p align="center">
+  <img src="Images/raspberry-pi-4.jpg" width="350">
+</p>
+- **Raspberry Pi Camera Module v2** - High-quality road monitoring camera
+<p align="center">
+  <img src="Images/RaspeberryPiCameraV2.jpg" width="350">
+</p>
+- **MicroSD Card** (64GB+) - Operating system and software storage
+<p align="center">
+  <img src="Images/SDcard.jpg" width="300">
+</p>
+- **Raspberry Pi type-c power supply** - to operate the Raspberry Pi
+<p align="center">
+  <img src="Images/RaspberryPiTypeCadapter.jpg" width="300">
+</p>
 - Runs YOLO object detection model locally on the Raspberry Pi system for real-time traffic analysis and sets it up to send results to Firebase
 
 #### 2. Traffic Control System (ESP32 Master) 
-- **ESP32 Development Board** - Main traffic controller ![ESP32](Images/ESP32-WROOM-Board.jpg)
-- **Traffic Light Module** - Physical 3-color LED traffic signal ![Traffic module](Images/trafficlightmodule.jpg)
-- **3x Servo Motors** - Emergency gate, speed bump, and Citizen gate control ![servo](Images/Servo-Motor-SG90.jpg)
-- **5V Relay Module** - Street light control (10 white LEDs) ![LEDs](Images/LED-White5mm.jpg)
-- **I2C LCD Display 16x2** - System status display ![LCD](Images/LCD16x2-I2C.jpg)
+- **ESP32 Development Board** - Main traffic controller
+<p align="center">
+  <img src="Images/ESP32-WROOM-Board.jpg" width="350">
+</p>
+- **Traffic Light Module** - Physical 3-color LED traffic signal
+<p align="center">
+  <img src="Images/trafficlightmodule.jpg" width="250">
+</p>
+- **3x Servo Motors** - Emergency gate, speed bump, and Citizen gate control
+<p align="center">
+  <img src="Images/Servo-Motor-SG90.jpg" width="250">
+</p>
+- **5V Relay Module** - Street light control (10 white LEDs)
+<p align="center">
+  <img src="Images/LED-White5mm.jpg" width="250">
+</p>
+- **I2C LCD Display 16x2** - System status display
+<p align="center">
+  <img src="Images/LCD16x2-I2C.jpg" width="300">
+</p>
 
 #### 3. Sensor Network
 - **MQ135 Gas Sensor** - Air pollution monitoring note: in the prototype, it is not necessary as there won't be actual pollution, so I removed it
-- **2x IR Sensors** - use for Vehicle speed calculation by calculating the time and dividing the distance between the two IRs over the time gotten by the IRs, and use its speed result to choose whether to open or close the bumper. ![IR](Images/IR-Infrared.jpg)
-- **HC-SR04 Ultrasonic Sensor** - Vehicle presence detection to reduce energy by decreasing the time that light is on. ![Ultrasonic](Images/Ultrasonic-Sensor-HC-SR04.jpg)
-- **LDR Module** - Day/night detection for automatic lighting ![LDR](Images/ldr.jpg)
-- **Push Button** - Citizen crossing request ![PushButton](Images/pushbutton.jpg)
+- **2x IR Sensors** - use for Vehicle speed calculation by calculating the time and dividing the distance between the two IRs over the time gotten by the IRs, and use its speed result to choose whether to open or close the bumper.
+<p align="center">
+  <img src="Images/IR-Infrared.jpg" width="300">
+</p>
+- **HC-SR04 Ultrasonic Sensor** - Vehicle presence detection to reduce energy by decreasing the time that light is on.
+<p align="center">
+  <img src="Images/Ultrasonic-Sensor-HC-SR04.jpg" width="300">
+</p>
+- **LDR Module** - Day/night detection for automatic lighting
+<p align="center">
+  <img src="Images/ldr.jpg" width="250">
+</p>
+- **Push Button** - Citizen crossing request
+<p align="center">
+  <img src="Images/pushbutton.jpg" width="200">
+</p>
 
 #### 4. Communication
 - **WiFi Connectivity** - Both Raspberry Pi and ESP32 connect to WiFi, and both connect to Firebase to share data fast and efficiently. Also, the app uses the database as the source of the data.
