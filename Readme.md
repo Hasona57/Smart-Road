@@ -20,26 +20,26 @@ The project was first made as a small prototype for the original road, but for t
 
 ### Hardware Components
 
-#### 1. AI Vision System (Raspberry Pi) ![Raspberry Pi](Images/raspberry-pi-4.jpg)
-- **Raspberry Pi 4** (8GB+ RAM) - Main AI processing unit
-- **Raspberry Pi Camera Module v2** - High-quality road monitoring camera
-- **MicroSD Card** (64GB+) - Operating system and software storage
-- **Raspberry Pi type-c power supply** - to operate the Raspberry Pi
+#### 1. AI Vision System (Raspberry Pi) 
+- **Raspberry Pi 4** (8GB+ RAM) - Main AI processing unit ![Raspberry Pi](Images/raspberry-pi-4.jpg)
+- **Raspberry Pi Camera Module v2** - High-quality road monitoring camera ![camera](Images/RaspeberryPiCameraV2.jpg)
+- **MicroSD Card** (64GB+) - Operating system and software storage ![SD](Images/SDcard.jpg)
+- **Raspberry Pi type-c power supply** - to operate the Raspberry Pi ![Raspberry Pi Adapter](Images/RaspberryPiTypeCadapter.jpg)
 - Runs YOLO object detection model locally on the Raspberry Pi system for real-time traffic analysis and sets it up to send results to Firebase
 
-#### 2. Traffic Control System (ESP32 Master) ![ESP32](Images/ESP32-WROOM-Board.jpg)
-- **ESP32 Development Board** - Main traffic controller
-- **Traffic Light Module** - Physical 3-color LED traffic signal
-- **3x Servo Motors** - Emergency gate, speed bump, and Citizen gate control
-- **5V Relay Module** - Street light control (10 white LEDs)
-- **I2C LCD Display 16x2** - System status display
+#### 2. Traffic Control System (ESP32 Master) 
+- **ESP32 Development Board** - Main traffic controller ![ESP32](Images/ESP32-WROOM-Board.jpg)
+- **Traffic Light Module** - Physical 3-color LED traffic signal ![Traffic module](Images/trafficlightmodule.jpg)
+- **3x Servo Motors** - Emergency gate, speed bump, and Citizen gate control ![servo](Images/Servo-Motor-SG90.jpg)
+- **5V Relay Module** - Street light control (10 white LEDs) ![LEDs](Images/LED-White5mm.jpg)
+- **I2C LCD Display 16x2** - System status display ![LCD](Images/LCD16x2-I2C.jpg)
 
 #### 3. Sensor Network
 - **MQ135 Gas Sensor** - Air pollution monitoring note: in the prototype, it is not necessary as there won't be actual pollution, so I removed it
 - **2x IR Sensors** - use for Vehicle speed calculation by calculating the time and dividing the distance between the two IRs over the time gotten by the IRs, and use its speed result to choose whether to open or close the bumper. ![IR](Images/IR-Infrared.jpg)
 - **HC-SR04 Ultrasonic Sensor** - Vehicle presence detection to reduce energy by decreasing the time that light is on. ![Ultrasonic](Images/Ultrasonic-Sensor-HC-SR04.jpg)
 - **LDR Module** - Day/night detection for automatic lighting ![LDR](Images/ldr.jpg)
-- **Push Button** - Citizen crossing request ![PushButton](Images/push%button.jpg)
+- **Push Button** - Citizen crossing request ![PushButton](Images/pushbutton.jpg)
 
 #### 4. Communication
 - **WiFi Connectivity** - Both Raspberry Pi and ESP32 connect to WiFi, and both connect to Firebase to share data fast and efficiently. Also, the app uses the database as the source of the data.
@@ -235,6 +235,7 @@ The Flutter mobile application provides:
 See [BOM.csv](BOM.csv) for complete component list with prices and vendors.
 
 **Approximate Total Cost**: ~8835 EGP (Egyptian Pounds)
+For me I have some of the components as I have an LCD I2C, a Push button, an LDR, 3 servos, a traffic light, a breadboard, an ESP32, LEDs, a Relay, a 5V Adapter, some Resistance, and 2 IRs, so it will be ~**7935.5** EGP (Egyptian Pounds)
 
 ---
 
