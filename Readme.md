@@ -13,12 +13,14 @@
 
 ---
 ## images and how they will be connected to the prototype:
-The project is made first as a small prototype for the original road but for the raspberry pi if worked it can be used as it on actual road but if the governorate take this idea there will be high quality cameras and high processing so I made this as a start to make my country to imporve.
-- First, the base is a cardboard that we colored it and make it looks like a road. as shown in the image ![painting cardboard](Images/painting.jpg)
+The project was first made as a small prototype for the original road, but for the Raspberry Pi, if it works, it can be used as it is on the actual road but if the governorate takes this idea, there will be high-quality cameras and high processing, so I made this as a start to make my country.
+- First, the base is a cardboard that we colored and made look like a road, as shown in the image ![painting cardboard](Images/painting.jpg)
+- Second, we printed some 3D parts for the project. We printed a stand for the traffic light and attached another stand to it that inserts into the first one for the camera module. ![3D printing parts](Images/Screenshot%2025-12-10%055634.png) ![3D printing parts2](Images/Screenshot%2025-12-10%055656.png) ![3D printing parts3](Images/Screenshot%2025-12-10%055706.png)
+- Thirdly, some carton caps were put under the prototype to make a space under it for connections to be from downward and to make the ACTibump move up and down using the servo. ![Prototype](Images/84b82b9f-c0b8-411b-b61f-d8473a4bb700.jpg)
 
 ### Hardware Components
 
-#### 1. AI Vision System (Raspberry Pi)
+#### 1. AI Vision System (Raspberry Pi) ![Raspberry Pi](Images/raspberry-pi-4.jpg)
 - **Raspberry Pi 4** (8GB+ RAM) - Main AI processing unit
 - **Raspberry Pi Camera Module v2** - High-quality road monitoring camera
 - **MicroSD Card** (64GB+) - Operating system and software storage
@@ -33,7 +35,7 @@ The project is made first as a small prototype for the original road but for the
 - **I2C LCD Display 16x2** - System status display
 
 #### 3. Sensor Network
-- **MQ135 Gas Sensor** - Air pollution monitoring
+- **MQ135 Gas Sensor** - Air pollution monitoring note: in the prototype, it is not necessary as there won't be actual pollution, so I removed it
 - **2x IR Sensors** - use for Vehicle speed calculation by calculating the time and dividing the distance between the two IRs over the time gotten by the IRs, and use its speed result to choose whether to open or close the bumper.
 - **HC-SR04 Ultrasonic Sensor** - Vehicle presence detection to reduce energy by decreasing the time that light is on.
 - **LDR Module** - Day/night detection for automatic lighting
