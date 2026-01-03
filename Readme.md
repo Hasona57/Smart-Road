@@ -71,6 +71,20 @@
 - The Raspberry Pi sends the result through a real-time Firebase database, then the ESP32 receives it and processes it to choose if action needs to be taken, whether to change the traffic light time or to open the emergency gate, and the ESP32 processes other systems (light, push button, and speed bump)
 - The app gets data from the Firebase to display real-time data
 
+## Changing the Raspberry Pi to match the budget
+- PI zero 2 W it is cheap but its ram and processor wont work for detection so we searched a lot until we found RP 3B+ which is not good for detection too but it is better than the zero 2 W and wont exceed the budget. and here is images for the least price we found
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="Images/cart1.png" width="300" height="300">
+  <img src="Images/cart2.png" width="300" height="300">
+</div>
+
+## Full assembly images till now
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="Images/Full.jpg" width="300" height="300">
+  <img src="Images/Full2.jpg" width="300" height="300">
+  <img src="Images/connections.jpg" width="300" height="300">
+</div>
+
 ## coding
 - Python for the AI model and the RP code
 - C++ for the ESP32 CAM code
