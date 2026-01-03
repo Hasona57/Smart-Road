@@ -60,7 +60,7 @@
   <img src="Images/3D2.png" width="300" height="300">
   <img src="Images/3D3.png" width="300" height="300">
 </div>
-- Third, we start adding the component that we afford to get and make the connection beneath the road, and add some cups to carry it up upon the floor, then test the wired component in each system on its own, then test two systems, then check if all the systems are working together.
+- Third, we start adding the component that we can afford to get and make the connection beneath the road, and add some cups to carry it up upon the floor, then test the wired component in each system on its own, then test two systems, then check if all the systems are working together.
 
 ## AI
 - First of all, I used the YOLO model directly without any training or making a specific model for my project, and it was good with actual images from real life, but for toy cars in the prototype, it always says mostly toy car without differentiation between the emergency and normal cars.
@@ -72,7 +72,7 @@
 - The app gets data from the Firebase to display real-time data
 
 ## Changing the Raspberry Pi to match the budget
-- PI zero 2 W it is cheap but its ram and processor wont work for detection so we searched a lot until we found RP 3B+ which is not good for detection too but it is better than the zero 2 W and wont exceed the budget. and here is images for the least price we found
+- PI zero 2 W, it is cheap, but its RAM and processor won't work for detection, so we searched a lot until we found RP 3B+, which is not good for detection either, but it is better than the zero 2 W and won't exceed the budget. and here is images for the least price we found
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="Images/cart1.png" width="300" height="300">
   <img src="Images/cart2.png" width="300" height="300">
