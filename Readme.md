@@ -90,6 +90,12 @@
 - C++ for the ESP32 CAM code
 - Dart for Flutter app code
 
+## Links
+- https://drive.google.com/drive/folders/1oXieUDFhaSvpWXGAfWP8MMazlWLh3bht?usp=drive_link (Folder for full assembly and 3D video render)
+- https://drive.google.com/drive/folders/1KsriBLeugqPdMsl5KT9PRbp6rbyMKrla?usp=sharing (3D Blender file)
+- https://wokwi.com/projects/453308781447889921 (Arduino code)
+- https://wokwi.com/projects/453387951416239105 (ESP32 code)
+
 ## cost
 - As shown in [BOM.csv](https://github.com/Hasona57/Smart-Road/blob/79e5c046aa0be40c0b9f62295015dc0e1bf572b4/BOM.csv) approxmate price is 8835 EGP
 - For me, I have some of the components as I have an LCD I2C, a Push button, an LDR, 3 servos, a traffic light, a breadboard, an ESP32, LEDs, a Relay, a 5V Adapter, some Resistance, and 2 IRs, so it will be ~7935.5 EGP (Egyptian Pounds)
